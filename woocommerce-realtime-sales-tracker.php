@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name:        WooCommerce Realtime Sales Tracker
-Plugin URI:         https://github.com/monusinghlodhi/woocommerce-realtime-sales-tracker
+Plugin URI:         https://example.com/plugins/the-basics/
 Description:        A plugin to Store WooCommerce Sales Into Firebase also retrieve data from firebase and send daily sales summaries via email
 Version:            1.0
 Author:             Monu Singh
@@ -161,7 +161,7 @@ function compile_daily_sales_summary() {
     }
 
     // Compose email message
-    $to      = 'info@monusingh.com';
+    $to      = get_option("firebase_summery_email_id");
     $subject = 'Daily Sales Summary';
     $message = "Total Sales: $total_sales\n\n";
     $message .= "Total Revenue: $total_revenue";
